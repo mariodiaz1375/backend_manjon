@@ -208,7 +208,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'consultorio.manjon@gmail.com'
 EMAIL_HOST_PASSWORD = 'ufkl bfaj lrrj mbbj'
-DEFAULT_FROM_EMAIL = 'tu-email@gmail.com'
+DEFAULT_FROM_EMAIL = 'consultorio.manjon@gmail.com'
 
 # URL base de tu frontend (para los enlaces de recuperación)
 FRONTEND_URL = os.environ.get('FRONTEND_URL', 'https://frontendmanjon.vercel.app')
