@@ -179,16 +179,19 @@ Si no solicitaste este cambio, ignora este correo.
 Saludos,
 Equipo del Consultorio Manjón
         """
+        try:
+            send_mail(
+                subject=subject,
+                message=message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[email],
+                fail_silently=False,
+            )
         
-        send_mail(
-            subject=subject,
-            message=message,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[email],
-            fail_silently=False,
-        )
-        
-        return {'message': 'Se ha enviado un correo con instrucciones para recuperar tu contraseña.'}
+            return {'message': 'Se ha enviado un correo con instrucciones para recuperar tu contraseña.'}
+        except Exception as e:
+            print(f"ERROR ENVIANDO CORREO: {e}")
+            raise serializers.ValidationError({'error': 'No se pudo enviar el correo. Contacte al administrador.'})
 
 
 class PasswordResetConfirmSerializer(serializers.Serializer):
