@@ -203,22 +203,22 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
 }
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 465
-# EMAIL_USE_TLS = False
-# EMAIL_USE_SSL = True
-# EMAIL_HOST_USER = 'consultorio.manjon@gmail.com'
-# EMAIL_HOST_PASSWORD = 'ufkl bfaj lrrj mbbj'
-# DEFAULT_FROM_EMAIL = 'consultorio.manjon@gmail.com'
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.resend.com'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465
+EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
-EMAIL_HOST_USER = 'resend'  # Literalmente la palabra 'resend'
-EMAIL_HOST_PASSWORD = 're_gUtYvQd2_ExB1SY6MraZSGarsjbKb5VxB' 
-DEFAULT_FROM_EMAIL = 'onboarding@resend.dev' # Para pruebas iniciales
+EMAIL_HOST_USER = 'consultorio.manjon@gmail.com'
+EMAIL_HOST_PASSWORD = 'ufkl bfaj lrrj mbbj'
+DEFAULT_FROM_EMAIL = 'consultorio.manjon@gmail.com'
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.resend.com'
+# EMAIL_PORT = 465
+# EMAIL_USE_SSL = True
+# EMAIL_HOST_USER = 'resend'  # Literalmente la palabra 'resend'
+# EMAIL_HOST_PASSWORD = 're_gUtYvQd2_ExB1SY6MraZSGarsjbKb5VxB' 
+# DEFAULT_FROM_EMAIL = 'onboarding@resend.dev' # Para pruebas iniciales
 
 # URL base de tu frontend (para los enlaces de recuperación)
 FRONTEND_URL = os.environ.get('FRONTEND_URL', 'https://frontendmanjon.vercel.app')
